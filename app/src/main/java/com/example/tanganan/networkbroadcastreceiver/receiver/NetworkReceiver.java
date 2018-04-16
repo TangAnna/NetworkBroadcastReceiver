@@ -9,7 +9,7 @@ import com.example.tanganan.networkbroadcastreceiver.tools.NetStatusUtil;
 
 /**
  * 实时监测网络状态的 广播
- * Created by TangAnna on 2018/4onReceive/16.
+ * Created by TangAnna on 2018/4/16.
  */
 
 public class NetworkReceiver extends BroadcastReceiver {

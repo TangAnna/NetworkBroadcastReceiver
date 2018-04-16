@@ -40,7 +40,7 @@ public class NetStatusUtil {
 
             if (activeNetworkInfo.getType() == (ConnectivityManager.TYPE_WIFI)) {
                 return NETWORK_WIFI;
-            } else if (activeNetworkInfo.getType() == (ConnectivityManager.TYPE_MOBILE)) {
+            } else if (activeNetworkInfo.getType() == (ConnectivityManager.TYPE_MOBILE)) {//可以更详细的分为2G/3G...
                 return NETWORK_MOBILE;
             }
         } else {
