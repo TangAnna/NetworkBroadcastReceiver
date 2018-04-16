@@ -64,7 +64,7 @@ BroadcastReceiver广播，Android四大组件之一，它使用的是设计者�
 2，动态注册，灵活，跟随组件的生命周期而变化，需要特定时刻监听广播；
 
 
-系统广播（System Broadcast）
+####系统广播（System Broadcast）
 
 Android系统广播action如下：（https://www.jianshu.com/p/ca3d87a4cdf3）
 
