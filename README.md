@@ -16,4 +16,41 @@ BroadcastReceiver广播，Android四大组件之一，它使用的是设计者�
                  <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
              </intent-filter>
        </receiver>
-   
+
+动态注册，在使用的地方使用registerReceiver()和unregisterReceiver()方法进行注册和注销，注册时建议在onResume()方法中进行，注销在onPause()方法中进行，
+在Activity的生命周期中这两个方法是一定会调用的，避免了内存泄漏的危险，代码如下：
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerMyReceiver();
+    }
+    
+    /**
+     * 注册
+     */
+    public void registerMyReceiver() {
+        if (mMyBroadcastReceiver == null) {
+            mMyBroadcastReceiver = new NetworkReceiver();
+        }
+        mMyBroadcastReceiver.setNetStateInterface(this);
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        registerReceiver(mMyBroadcastReceiver, filter);
+    }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unRegisterMyReceiver();
+    }
+    
+    /**
+     * 注销
+     */
+    public void unRegisterMyReceiver() {
+        if (mMyBroadcastReceiver != null) {
+            unregisterReceiver(mMyBroadcastReceiver);
+        }
+    }

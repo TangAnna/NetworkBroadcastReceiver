@@ -32,13 +32,6 @@ public class MainActivity extends AppCompatActivity implements NetworkReceiver.N
         registerMyReceiver();
 
     }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        unRegisterMyReceiver();
-    }
-
     /**
      * 注册
      */
@@ -50,6 +43,12 @@ public class MainActivity extends AppCompatActivity implements NetworkReceiver.N
         IntentFilter filter = new IntentFilter();
         filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
         registerReceiver(mMyBroadcastReceiver, filter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unRegisterMyReceiver();
     }
 
     /**
