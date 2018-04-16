@@ -10,9 +10,9 @@ BroadcastReceiver广播，Android四大组件之一，它使用的是设计者�
 静态注册：
 在manifest中使用<receiver/>标签，如：
 
-'        <receiver android:name=".receiver.NetworkReceiver">
+        ```<receiver android:name=".receiver.NetworkReceiver">
              <intent-filter>
                  <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
              </intent-filter>
-         </receiver>'
+         </receiver>
    
