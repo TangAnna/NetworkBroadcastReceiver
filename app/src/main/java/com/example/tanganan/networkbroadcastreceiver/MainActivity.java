@@ -3,6 +3,7 @@ package com.example.tanganan.networkbroadcastreceiver;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements NetworkReceiver.N
     private TextView mTextView;
     private NetworkReceiver mMyBroadcastReceiver;
     private NetWorkDialog mNetWorkDialog;
+    private Handler
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +81,6 @@ public class MainActivity extends AppCompatActivity implements NetworkReceiver.N
                 }
                 Toast.makeText(this, "当前没有网络", Toast.LENGTH_SHORT).show();
                 break;
-
         }
     }
 }
