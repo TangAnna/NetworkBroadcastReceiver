@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--   从上往下 -->
+    <style name="anim_popup_person_show">
+        <item name="android:windowEnterAnimation">@anim/anim_popup_person_show_menu_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_popup_person_show_menu_out</item>
+    </style>c
+
+    <!-- 从下往上 有位移 -->
+    <style name="anim_popup_from_bottom">
+        <item name="android:windowEnterAnimation">@anim/anim_from_bottom_menu_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_from_bottom_menu_out</item>
+    </style>
+    <!-- 中间的动画 -->
+    <style name="anim_popup_from_center">
+        <item name="android:windowEnterAnimation">@anim/anim_from_center_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_from_center_out</item>
+    </style>
+
+</resources>
